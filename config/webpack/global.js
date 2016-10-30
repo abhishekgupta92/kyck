@@ -107,7 +107,9 @@ module.exports = function(_path) {
       //new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en|hu/),
       new webpack.ProvidePlugin({
         $: 'jquery',
-        jQuery: 'jquery'
+        jQuery: 'jquery',
+        "window.jQuery" : 'jquery',
+        moment : 'moment'
       }),
       new webpack.DefinePlugin({
         'NODE_ENV': JSON.stringify(NODE_ENV)
